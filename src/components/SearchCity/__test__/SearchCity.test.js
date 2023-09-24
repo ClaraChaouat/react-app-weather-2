@@ -3,7 +3,7 @@ import { render, fireEvent, screen } from "@testing-library/react";
 import SearchCity from "../SearchCity";
 
 describe("SearchCity Component", () => {
-  test("it updates the city input value", () => {
+  it("updates the city input value", () => {
     render(<SearchCity />);
     const cityInput = screen.getByLabelText(/city/i);
 
@@ -14,7 +14,7 @@ describe("SearchCity Component", () => {
     expect(cityInput.value).toBe("Paris");
   });
 
-  test("it triggers the search callback on input change", () => {
+  it("triggers the search callback on input change", () => {
     // Create a mock function to pass as a prop
     const mockSearchCallback = jest.fn();
 
